@@ -1,0 +1,16 @@
+{% extends 'comcom/base.html' %}
+
+{% block content %}
+    <section class="section">
+        <div class="container">
+            <form action="" method="POST">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <button type="submit">送信</button>
+                <h1>
+                    ＊＊＊名前を入力してください＊＊＊
+                </h1>
+            </form>
+        </div>
+    </section>
+{% endblock %}
