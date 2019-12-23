@@ -1,0 +1,14 @@
+{% extends "register/base.html" %}
+{% block content %}
+{% if user.is_authenticated %}　
+    <a href="{% url 'comcom:post_list' %}">地図へ</a>
+    <br>
+    <a href="{% url 'comcom:post_list' %}">天気情報へ</a>
+    地図とマップページへの遷移(a hrefを記載する)
+{% else %}　
+    <a href="{% url 'register:user_create' %}" >初めての方はこちら！</a>
+    <br>
+    <a href="{% url 'register:login' %}" >既に登録している方はこちら！</a>
+ここにサイトの説明や画像の挿入を行う
+{% endif %}
+{% endblock %}
